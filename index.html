@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Рынок All-on-4 Челябинск</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Единая тёмная тема бренда «Алькон», без светлого варианта. Layout: отчёт агентства «Алькон» — одна колонка ~1100px, сводка → рейтинг с весами → полная таблица → вывод по Доминанте → методика */
+:root{
+  /* фирменные токены alkon.pro: --theme_yellow, --main/primary/light-background, --neutral-*, --border-*, --success/--danger */
+  --bg:#080808; --surface:#121212; --raised:#1C1C1C; --line:#353535; --line-2:#4E4E4E;
+  --fg:#DADADA; --soft:#BABABA; --muted:#7A7A7A; --strong:#FFFFFF;
+  --accent:#DE8216; --accent-soft:rgba(222,130,22,.12);
+  --good:#8CC043; --warn:#E3B341; --bad:#D13846;
+  --bar-q:#BABABA;
+  --f-display:"Unbounded","Golos Text",system-ui,sans-serif;
+  --f-body:"Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--f-body);margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:40px 80px;display:grid;gap:56px}
+h1,h2,h3{font-family:var(--f-display);color:var(--strong);text-wrap:balance;margin:0;font-weight:700}
+h1{font-size:clamp(28px,5vw,46px);line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(20px,3vw,26px);line-height:1.2}
+h3{font-size:16px;font-weight:500}
+p{margin:0;max-width:68ch}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,th:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.eyebrow{font:600 12px/1.4 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+section{display:grid;gap:20px;min-width:0}
+.head{display:grid;gap:16px}
+.lead{font-size:18px;color:var(--fg)}
+/* summary */
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.fact{background:var(--surface);padding:18px 20px;display:grid;gap:4px;align-content:start}
+.fact b{font:600 24px/1.2 var(--f-mono);color:var(--strong);font-variant-numeric:tabular-nums}
+.fact span{font-size:13px;color:var(--soft)}
+.fact.hl b{color:var(--accent)}
+@media (max-width:760px){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* weight control */
+.control{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;padding:14px 18px;background:var(--surface);border:1px solid var(--line)}
+.control label{font-weight:600;color:var(--strong)}
+.control input[type=range]{flex:1 1 220px;accent-color:var(--accent);min-width:0}
+.control output{font-family:var(--f-mono);font-size:14px;white-space:nowrap}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:middle}
+/* ranking */
+.rank{display:grid;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:44px minmax(0,1.6fr) 120px minmax(0,2fr) 64px;gap:16px;align-items:center;padding:12px 4px;border-bottom:1px solid var(--line)}
+.row.client{background:var(--accent-soft);box-shadow:inset 3px 0 0 var(--accent)}
+.pos{font:600 18px/1 var(--f-mono);color:var(--muted)}
+.row.client .pos{color:var(--accent)}
+.nm{min-width:0}
+.nm b{display:block;color:var(--strong);font-weight:600}
+.nm small{color:var(--muted);font-size:12px}
+.price{font-family:var(--f-mono);font-size:14px;text-align:right;font-variant-numeric:tabular-nums}
+.bars{display:grid;gap:5px;min-width:0}
+.bar{display:grid;grid-template-columns:62px 1fr 28px;gap:8px;align-items:center;font-size:11px;color:var(--muted)}
+.track{height:7px;background:var(--raised);position:relative}
+.fill{position:absolute;inset:0 auto 0 0}
+.fill.p{background:var(--accent)} .fill.q{background:var(--bar-q)}
+.bar .v{font-family:var(--f-mono);text-align:right;color:var(--fg)}
+.tot{font:600 22px/1 var(--f-mono);text-align:right;color:var(--strong)}
+.agg{display:inline-block;margin-left:6px;font:600 10px/1 var(--f-mono);padding:3px 5px;border:1px solid var(--line-2);color:var(--muted);vertical-align:middle;letter-spacing:.04em}
+@media (max-width:760px){
+  .row{grid-template-columns:34px minmax(0,1fr) 54px;grid-template-areas:"pos nm tot" "pos price price" "pos bars bars";row-gap:8px}
+  .pos{grid-area:pos;align-self:start}.nm{grid-area:nm}.tot{grid-area:tot}.price{grid-area:price;text-align:left}.bars{grid-area:bars}
+}
+/* table */
+.tablebox{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:1180px;font-size:13px}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font:600 11px/1.3 var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:var(--raised);position:sticky;top:0;cursor:pointer;white-space:nowrap;user-select:none}
+th[aria-sort="descending"]::after{content:" ↓";color:var(--accent)}
+th[aria-sort="ascending"]::after{content:" ↑";color:var(--accent)}
+td.r{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.client td{background:var(--accent-soft)}
+td .note{display:block;color:var(--soft);font-size:12px;margin-top:4px;max-width:46ch}
+.pill{display:inline-block;font:600 11px/1 var(--f-body);padding:4px 7px;border:1px solid currentColor;white-space:nowrap}
+.pill.full{color:var(--good)} .pill.part{color:var(--warn)} .pill.none{color:var(--muted)}
+.rt{white-space:nowrap}.rt small{color:var(--muted)}
+.rt.low{color:var(--bad);font-weight:600}
+.sig{display:flex;gap:3px}
+.sig i{width:9px;height:9px;border:1px solid var(--line-2)}
+.sig i.on{background:var(--good);border-color:var(--good)}
+/* client block */
+.split{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.split>div{background:var(--surface);padding:20px;display:grid;gap:12px;align-content:start;min-width:0}
+.split h3{font-size:14px;font-family:var(--f-mono);text-transform:uppercase;letter-spacing:.06em}
+.split .plus h3{color:var(--good)} .split .minus h3{color:var(--bad)} .split .todo h3{color:var(--accent)}
+.split ul,.split ol{margin:0;padding-left:18px;display:grid;gap:10px;font-size:14px}
+@media (max-width:860px){.split{grid-template-columns:1fr}}
+.callout{border-left:3px solid var(--accent);padding:4px 0 4px 16px;display:grid;gap:8px}
+/* method */
+.method{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.method ol,.method ul{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14px}
+@media (max-width:760px){.method{grid-template-columns:1fr}}
+.out{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px;font-size:14px}
+.out div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+@media (max-width:760px){.out{grid-template-columns:1fr}}
+.src{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px}
+@media (prefers-reduced-motion:no-preference){.fill{transition:width .35s ease}}
+</style>
+
+<div class="wrap">
+  <header class="head">
+    <div class="eyebrow">Алькон · Анализ рынка · Челябинск · 2 октября 2026 · цена Доминанты обновлена 5 октября</div>
+    <h1>Имплантация <span style="white-space:nowrap">All-on-4</span> в&nbsp;Челябинске</h1>
+    <p class="lead">Сравнили 19 клиник, которые публикуют цену на восстановление челюсти на четырёх имплантах. Рейтинг строится по двум осям: цена пакета и качество. Качество складывается из репутации на Яндекс Картах, 2ГИС и ПроДокторов и из того, насколько честно клиника описывает услугу на сайте.</p>
+  </header>
+
+  <section aria-label="Сводка">
+    <div class="facts">
+      <div class="fact"><b>19</b><span>клиник в рейтинге, ещё 8 отсеяны</span></div>
+      <div class="fact"><b>112–435 тыс. ₽</b><span>разброс цены за одну челюсть</span></div>
+      <div class="fact"><b>230 000 ₽</b><span>медианная цена по выборке</span></div>
+      <div class="fact hl"><b id="domPos">11 место</b><span>Доминанта при весе цены 50%</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-rank">
+    <div class="head">
+      <div class="eyebrow">Рейтинг</div>
+      <h2 id="h-rank">Цена и качество</h2>
+      <p class="muted">Все оценки по 10-балльной шкале. Ползунок меняет вес цены в итоговом балле: влево — важнее качество, вправо — важнее цена.</p>
+    </div>
+    <div class="control">
+      <label for="w">Вес цены</label>
+      <input type="range" id="w" min="0" max="100" step="10" value="50">
+      <output id="wout" for="w">цена 50% · качество 50%</output>
+    </div>
+    <div class="legend"><span><i style="background:var(--accent)"></i>Цена: дешевле — выше балл</span><span><i style="background:var(--bar-q)"></i>Качество: репутация 60% + прозрачность сайта 40%</span><span><span class="agg">АГР</span> данные только с агрегаторов</span></div>
+    <div class="rank" id="rank"></div>
+  </section>
+
+  <section aria-labelledby="h-table">
+    <div class="head">
+      <div class="eyebrow">Сводная таблица</div>
+      <h2 id="h-table">Все клиники и источники</h2>
+      <p class="muted">Нажмите на заголовок столбца, чтобы отсортировать. Рейтинги указаны по сети: средний балл и сумма оценок по филиалам. Квадраты в столбце «Сигналы» соответствуют восьми критериям прозрачности из методики.</p>
+    </div>
+    <div class="tablebox"><table id="tbl"><thead><tr>
+      <th data-k="name">Клиника</th><th data-k="br">Филиалы</th><th data-k="price">Цена, ₽</th><th data-k="scope">Что входит</th><th data-k="impl">Импланты</th><th data-k="guar">Гарантия</th><th data-k="inst">Рассрочка</th><th data-k="ya">Яндекс</th><th data-k="gis">2ГИС</th><th data-k="pd">ПроДокторов</th><th data-k="sigs">Сигналы</th><th data-k="q">Качество</th><th data-k="tot">Итог</th>
+    </tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section aria-labelledby="h-dom">
+    <div class="head">
+      <div class="eyebrow">Клиент</div>
+      <h2 id="h-dom">Доминанта на этом рынке</h2>
+      <p>По прайсу клиники от октября 2026 All-on-4 стоит от 325 000 ₽. Это верхняя треть рынка: дороже только Астра Дентал (343 217 ₽), Вэладент (395 000 ₽) и Сити Смайл (435 000 ₽). Медиана по городу — 230 000 ₽. При весе цены 50% Доминанта на 11-м месте из 19. По качеству — на 5-м, после Стомпрактики, Белого Кита, Да Винчи и Sahar.Dental.</p>
+      <p>Главная проблема — цены в открытом доступе. На dominanta74.ru, ПроДокторов и 32top до сих пор стоит 145 000 ₽, в сниппете поиска 137 500 ₽. Пациент приходит с ожиданием цены в 2,2–2,4 раза ниже реальной.</p>
+    </div>
+    <div class="split">
+      <div class="plus"><h3>Сильные стороны</h3><ul>
+        <li>Премиальная немецкая система Ankylos с пожизненной гарантией на импланты.</li>
+        <li>Яндекс Карты 5,0 при 259 оценках и 2ГИС 4,9 при 181 оценке — на уровне лидеров.</li>
+        <li>На странице есть 14 отзывов, 4 кейса до/после и врачи со стажем.</li>
+        <li>Зубы на следующий день, своё КТ и 3D-сканирование.</li>
+      </ul></div>
+      <div class="minus"><h3>Слабые места</h3><ul>
+        <li>Цена 325 000 ₽ выше, чем у большинства пакетов на премиальных системах. Straumann в Белом Ките стоит 216 000 ₽, Astra Tech в Артисденте — 208 000 ₽, Nobel Biocare в СкрынниковВ — 180 000 ₽.</li>
+        <li>Устаревшие цены на сайте и агрегаторах: 145 000 и 137 500 ₽ вместо 325 000 ₽.</li>
+        <li>Постоянный протез входит в цену, но на сайте об этом не сказано, как и об остальном составе пакета. В этом ценовом сегменте у Астра Дентал перечислено всё, вплоть до костной пластики и циркониевого протеза.</li>
+        <li>ПроДокторов: 4,0 при 36 отзывах. У Sahar.Dental и Стомпрактики там 4,9.</li>
+        <li>На странице не упомянуты седация, наркоз и рассрочка. Седацию указывают пять конкурентов из рейтинга, рассрочку — девять.</li>
+      </ul></div>
+      <div class="todo"><h3>Что сделать</h3><ol>
+        <li>Срочно заменить 145 000 ₽ на актуальную цену на сайте, ПроДокторов, 32top и в Яндекс Бизнесе.</li>
+        <li>Написать на странице, что в 325 000 ₽ входит постоянный протез, и расписать остальной состав: материал протеза, шаблон, анестезию, наблюдение. При цене выше медианы на 95 000 ₽ пациенту нужно видеть, за что он платит.</li>
+        <li>Показать рассрочку на странице: при такой цене она снимает основное возражение.</li>
+        <li>Собрать отзывы пациентов All-on-4 на ПроДокторов: чтобы поднять оценку до 4,7, нужно около 85 новых пятёрок.</li>
+        <li>Если клиника даёт седацию, вынести её на страницу.</li>
+      </ol></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-take">
+    <div class="head">
+      <div class="eyebrow">Выводы по рынку</div>
+      <h2 id="h-take">Кто на что опирается</h2>
+    </div>
+    <div class="callout"><p><b>Белый Кит</b> лидирует при любом весе цены от 30% и выше. Это самый дешёвый пакет «под ключ» — 116 000 ₽ на Implantium, с открыто расписанным составом, видеокейсами и наркозом. Сеть из пяти филиалов, 3 668 оценок.</p></div>
+    <div class="callout"><p><b>Стомпрактика.рф</b> лучшая по качеству: выполнены все 8 сигналов прозрачности и собраны 6 217 оценок, больше всех на рынке. Цены на сайте и на ПроДокторов расходятся: 211 500 ₽ против 337 500 ₽.</p></div>
+    <div class="callout"><p><b>Дорогой сегмент от 320 000 ₽</b> — Семейная стоматологическая клиника, Доминанта, Астра Дентал, Вэладент и Сити Смайл. У Сити Смайл и Вэладента сильная репутация, но состав пакета не раскрыт. У Астра Дентал пакет самый полный, но слабые карты: 4,3 на Яндексе. Доминанта в этой группе лучшая по качеству: 7,4 из 10 против 5,3–6,4 у остальных.</p></div>
+    <div class="callout"><p><b>Цены на агрегаторах часто не совпадают с сайтами клиник.</b> У Доминанты, Стомпрактики, СкрынниковВ, Sahar.Dental и Астра Дентал разница составляет от 1,2 до 4,8 раза. Пациент видит обе цифры, и это бьёт по доверию.</p></div>
+  </section>
+
+  <section aria-labelledby="h-out">
+    <div class="head">
+      <div class="eyebrow">Вне рейтинга</div>
+      <h2 id="h-out">Кого не включили и почему</h2>
+    </div>
+    <div class="out">
+      <div><span>НикаСтом — цена только за имплант Osstem (от 29 000 ₽), пакетной нет. Яндекс 4,9 (93), 2ГИС 4,8 (81)</span><span class="muted">нет цены</span></div>
+      <div><span>Мир Улыбок — цена протеза указана без имплантов, сравнить нельзя. Яндекс 5,0 (163), 2ГИС 4,9 (508)</span><span class="muted">нет цены</span></div>
+      <div><span>MONA — только All-on-6, цены нет</span><span class="muted">нет цены</span></div>
+      <div><span>Алифмед — 145 000 ₽, на Яндексе «временно не работает»</span><span class="muted">закрыта</span></div>
+      <div><span>Пломбир — 60 000 ₽, рейтинг 1,0 на 32top</span><span class="muted">выброс</span></div>
+      <div><span>Sola — от 80 600 ₽, отзывов нет</span><span class="muted">выброс</span></div>
+      <div><span>Династия — 93 000 ₽, рейтинг 2,3 на 32top</span><span class="muted">выброс</span></div>
+      <div><span>ВИСВИ — от 100 900 ₽, 9 отзывов, сайт не проверен</span><span class="muted">мало данных</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-m">
+    <div class="head">
+      <div class="eyebrow">Методика</div>
+      <h2 id="h-m">Как считали</h2>
+    </div>
+    <div class="method">
+      <div style="display:grid;gap:12px">
+        <h3>Баллы</h3>
+        <ol>
+          <li><b>Цена</b> — самая низкая цена пакета All-on-4 на одну челюсть, которую клиника публикует. 10 баллов у самого дешёвого (112 000 ₽), 0 у самого дорогого (435 000 ₽), между ними линейно.</li>
+          <li><b>Репутация</b> — средняя оценка по Яндекс Картам, 2ГИС и ПроДокторов, взвешенная по числу оценок. Её сглаживаем к среднему по рынку 4,6 с весом 150 оценок, чтобы 5,0 при 50 отзывах не обгоняло 4,9 при двух тысячах. Шкала: 4,3 = 0, 5,0 = 10.</li>
+          <li><b>Прозрачность</b> — доля выполненных сигналов из восьми, умноженная на 10.</li>
+          <li><b>Качество</b> = 60% репутация + 40% прозрачность.</li>
+          <li><b>Итог</b> = вес цены × цена + (1 − вес) × качество.</li>
+        </ol>
+      </div>
+      <div style="display:grid;gap:12px">
+        <h3>Восемь сигналов прозрачности</h3>
+        <ul id="siglist"></ul>
+        <p class="muted" style="font-size:13px">Сигнал засчитывается, только если он виден на странице услуги или в прайсе. Если клиника что-то делает, но не пишет об этом, пациент этого не узнает, поэтому балл не ставится. Исключение — Доминанта: то, что постоянный протез входит в цену, подтвердила клиника, на сайте этого пока нет.</p>
+      </div>
+    </div>
+    <div class="callout"><p class="muted" style="font-size:14px">Ограничения. Цены сравниваются «как опубликовано», и состав пакетов разный: у одних только хирургия с временным протезом, у других всё под ключ. Это видно в столбце «Что входит». Яндекс Карты и 2ГИС проверены вручную 2 октября 2026, ПроДокторов и 32top — в тот же день. Медицинское качество работы врачей по открытым данным оценить нельзя: рейтинг показывает репутацию и подачу услуги, а не клинический результат.</p></div>
+    <div class="src">
+      <span>Источники:</span>
+      <a href="https://prodoctorov.ru/chelyabinsk/uslugi/imlanty-all-on-4/" target="_blank" rel="noopener">ПроДокторов, All-on-4</a>
+      <a href="https://www.32top.ru/chelyabinsk/stomatologii-implantaciya-all-on-4-usluga/" target="_blank" rel="noopener">32top, All-on-4</a>
+      <span>Яндекс Карты, 2ГИС, сайты клиник (ссылки в таблице)</span>
+    </div>
+  </section>
+</div>
+
+<script>
+const SIG=["Премиальная система в пакете (Straumann, Nobel, Ankylos, Astra, Anthogyr)","Состав пакета расписан","Постоянный протез входит в цену","КТ и 3D-планирование","Пожизненная гарантия на импланты","Кейсы до/после или видео на странице","Врачи-имплантологи названы","Седация или наркоз"];
+const SCOPE={full:["Под ключ","full"],part:["Частично","part"],none:["Не раскрыто","none"]};
+const D=[
+{name:"Доминанта",br:1,price:325000,psrc:"прайс клиники, октябрь 2026",scope:"full",impl:"Ankylos (Германия)",guar:"Пожизненная на импланты Ankylos",inst:"не указана",ya:[5.0,259],gis:[4.9,181],pd:[4.0,36],sig:[1,0,1,1,1,1,1,0],note:"Цена по прайсу клиники — от 325 000 ₽, постоянный протез входит (по данным клиники, на сайте не указано). В открытом доступе устаревшие цены: 145 000 ₽ на сайте и агрегаторах, 137 500 ₽ в сниппете поиска.",url:"https://dominanta74.ru/nashi-uslugi/implantatsiya-vse-na-4/",client:true},
+{name:"Стомпрактика.рф",br:7,price:211500,psrc:"сайт",scope:"full",impl:"ST, AnyOne, AnyRidge, Osstem, Straumann",guar:"До 100 лет на импланты",inst:"Кредит без первого взноса",ya:[5.0,1579],gis:[4.8,2809],pd:[4.9,1829],sig:[1,1,1,1,1,1,1,1],note:"Хирургия + адаптационный протез на ST — 174 000 ₽. Под ключ на AnyOne — от 211 500 ₽ на сайте, 337 500 ₽ на ПроДокторов.",url:"https://xn--80aaxhbinjjglg.xn--p1ai/services/protezirovanie-vse-na-4/"},
+{name:"Белый Кит",br:5,price:116000,psrc:"сайт",scope:"full",impl:"Implantium, Medentika, Straumann, Osstem, Astra Tech",guar:"Производителя + на работы клиники",inst:"Есть",ya:[4.8,1286],gis:[4.8,2382],pd:null,sig:[1,1,1,1,0,1,1,1],note:"Implantium 116 000 ₽, Medentika 144 000 ₽, Straumann 216 000 ₽. Включены диагностика, шаблон, временный и постоянный протез, анестезия.",url:"https://belkit.ru/uslugi/implantacziya-zubov/all-4-one/"},
+{name:"Sahar.Dental",br:2,price:144000,psrc:"ПроДокторов",scope:"none",impl:"Osstem, Astra Tech, Straumann, WhiteSKY",guar:"Пожизненная на импланты",inst:"не указана",ya:[5.0,609],gis:[5.0,489],pd:[4.9,204],sig:[1,0,0,1,1,0,1,0],note:"На сайте нет пакетной цены. На ПроДокторов: Энтузиастов — 144 000 ₽, Советская — 698 000 ₽. Акция: консультация + КТ бесплатно.",url:"https://sahar.dental/protezirovaniye"},
+{name:"Да Винчи",br:1,price:230000,psrc:"32top",scope:"full",impl:"не указана",guar:"Пожизненная на импланты",inst:"0%",ya:[4.9,220],gis:[4.9,319],pd:null,sig:[0,1,1,1,1,1,1,0],note:"На сайте цены скрыты за кнопкой записи. Своя зуботехническая лаборатория, кейсы до/после.",url:"https://xn--90abjak3afx5a5f.xn--p1ai/"},
+{name:"Астра Дентал",br:1,price:343217,psrc:"сайт",scope:"full",impl:"Nobel Biocare, Straumann",guar:"Пожизненная на конструкцию",inst:"0%",ya:[4.3,69],gis:[4.7,94],pd:null,sig:[1,1,1,1,1,0,0,1],note:"Самый полный пакет: КТ, анализы, шаблон, костная пластика при показаниях, циркониевый протез. На Яндекс Картах — 288 257 ₽.",url:"https://astradental.clinic/services/implantatsiya/all-on-4/"},
+{name:"СкрынниковВ",br:1,price:180000,psrc:"сайт",scope:"full",impl:"Nobel Biocare",guar:"Пожизненная (Nobel Biocare)",inst:"Есть",ya:[4.7,77],gis:[4.7,84],pd:null,sig:[1,1,1,0,1,0,1,0],note:"На dental74.ru — от 180 000 ₽ с постоянной конструкцией, на 32top — 318 000 ₽.",url:"https://dental74.ru/all-on-4/"},
+{name:"РадаМед",br:1,price:280000,psrc:"сайт",scope:"none",impl:"Straumann и др.",guar:"Есть, срок не указан",inst:"Есть",ya:[4.9,117],gis:[4.9,261],pd:null,sig:[1,0,0,1,0,0,1,0],note:"«От 280 000 ₽ за челюсть» после плана лечения, состав не раскрыт.",url:"https://xn--80aalbe5bya.xn--p1ai/uslugi/all-on-4"},
+{name:"Сити Смайл",br:4,price:435000,psrc:"сайт",scope:"none",impl:"Anthogyr; All-on-6 — Medentika",guar:"не указана",inst:"не указана",ya:[4.7,751],gis:[4.8,1205],pd:[5.0,1139],sig:[1,0,0,1,0,0,0,0],note:"Самая высокая цена. Отдельной страницы нет, только строка в прайсе. Победитель премии ПроДокторов 2025.",url:"https://xn--80apafkd6ach.xn--p1ai/price/"},
+{name:"Эталон",br:2,price:290000,psrc:"сайт",scope:"none",impl:"не указана",guar:"Есть, срок не указан",inst:"0%",ya:[4.8,513],gis:[4.7,503],pd:null,sig:[0,0,0,1,0,0,1,0],note:"Бесплатная первичная консультация и контрольные осмотры.",url:"https://etalonclinic.ru/services/implantation/vse-na-4/"},
+{name:"Семейная стоматологическая клиника",br:5,price:320000,psrc:"32top",scope:"part",impl:"не указана",guar:"На импланты и протез",inst:"Рассрочка, кредит",ya:[5.0,266],gis:[4.8,1640],pd:null,sig:[0,1,0,1,1,0,0,1],note:"На сайте только All-on-6 на титановой балке — от 390 000 ₽.",url:"https://fdclinic.ru/uslugi/implantaciya/implantatsiya-all-on-6/"},
+{name:"Вэладент + «Зуб даю»",br:7,price:395000,psrc:"сайт",scope:"none",impl:"Osstem",guar:"Пожизненная на импланты",inst:"Есть",ya:[4.6,657],gis:[4.8,1749],pd:null,sig:[0,0,0,1,1,0,1,1],note:"«Зуб даю» на Бр. Кашириных, 131Б — филиал Вэладента, цена та же. Анестезия отдельно — от 8 900 ₽.",url:"https://www.veladent.ru/uslugi/implantaciya-i-hirurgiya/implantaciya-vse-na-4"},
+{name:"Магия",br:1,price:243080,psrc:"32top",scope:"none",impl:"Implantium",guar:"н/д",inst:"н/д",ya:[5.0,210],gis:[4.9,346],pd:null,sig:[0,0,0,0,0,0,0,0],note:"Сайт не открылся при проверке 02.10.2026. В другом источнике — от 150 000 ₽.",url:"https://magic-stom.ru/services/implantacziya-zubov/implantacziya-ol-on-4/",agg:true},
+{name:"Кристалл",br:1,price:260000,psrc:"ПроДокторов",scope:"none",impl:"н/д",guar:"н/д",inst:"н/д",ya:[4.8,98],gis:[5.0,138],pd:[3.7,25],sig:[0,0,0,0,0,0,0,0],note:"Данные только с агрегаторов.",url:"https://kristallclinic.ru/ceny/",agg:true},
+{name:"Аура",br:1,price:200000,psrc:"32top",scope:"none",impl:"н/д",guar:"н/д",inst:"н/д",ya:[5.0,77],gis:[4.8,165],pd:null,sig:[0,0,0,0,0,0,0,0],note:"На сайте All-on-4 не описана.",url:"https://med-aura.ru/",agg:true},
+{name:"Артисдент",br:1,price:112000,psrc:"ПроДокторов",scope:"none",impl:"Implantium, AnyRidge, Astra Tech",guar:"н/д",inst:"н/д",ya:[5.0,70],gis:[4.9,90],pd:[3.7,24],sig:[1,0,0,0,0,0,1,0],note:"Implantium 112 000 ₽, AnyRidge 164 000 ₽, Astra 208 000 ₽. На сайте пакетных цен нет.",url:"https://artisdent.ru/implantaciya"},
+{name:"Артдент Камилова",br:2,price:175000,psrc:"ПроДокторов",scope:"none",impl:"Osstem",guar:"На имплантацию до 5 лет",inst:"н/д",ya:[5.0,54],gis:[5.0,83],pd:[4.1,40],sig:[0,0,0,0,0,0,1,0],note:"Соседний «Алифмед» (145 000 ₽) на Яндексе помечен «временно не работает».",url:"https://artdent-kamilova.ru/"},
+{name:"Дентакласс",br:1,price:135000,psrc:"32top",scope:"none",impl:"Osstem",guar:"Есть, срок не указан",inst:"н/д",ya:[4.9,44],gis:[4.8,222],pd:null,sig:[0,0,0,0,0,0,0,0],note:"Пункт «Все на 4» есть в меню, цены на странице нет.",url:"https://dentaklass74.ru/protez",agg:true},
+{name:"НеоВикс",br:1,price:160000,psrc:"32top",scope:"none",impl:"н/д",guar:"н/д",inst:"н/д",ya:[5.0,54],gis:[4.9,112],pd:null,sig:[0,0,0,0,0,0,0,0],note:"Данные только с агрегатора.",url:"https://www.32top.ru/chelyabinsk/stomatologii-implantaciya-all-on-4-usluga/",agg:true}
+];
+const pmin=Math.min(...D.map(c=>c.price)),pmax=Math.max(...D.map(c=>c.price));
+D.forEach(c=>{
+  const rs=[c.ya,c.gis,c.pd].filter(Boolean);
+  const N=rs.reduce((s,r)=>s+r[1],0), m=rs.reduce((s,r)=>s+r[0]*r[1],0)/N;
+  const b=(N*m+150*4.6)/(N+150);
+  c.N=N;c.rep=Math.max(0,Math.min(10,(b-4.3)/0.7*10));
+  c.sigs=c.sig.reduce((a,b)=>a+b,0)/8*10;
+  c.q=0.6*c.rep+0.4*c.sigs;
+  c.ps=10*(pmax-c.price)/(pmax-pmin);
+});
+const fmt=n=>n.toLocaleString("ru-RU").replace(/,/g," ");
+const f1=n=>n.toFixed(1).replace(".",",");
+const esc=s=>String(s).replace(/[&<>"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]));
+let W=0.5;
+function score(){D.forEach(c=>c.tot=W*c.ps+(1-W)*c.q)}
+function renderRank(){
+  score();
+  const s=[...D].sort((a,b)=>b.tot-a.tot);
+  document.getElementById("rank").innerHTML=s.map((c,i)=>`
+    <div class="row${c.client?" client":""}">
+      <div class="pos">${i+1}</div>
+      <div class="nm"><b>${esc(c.name)}${c.agg?'<span class="agg">АГР</span>':""}</b><small>${c.br>1?c.br+" филиалов · ":""}${fmt(c.N)} оценок</small></div>
+      <div class="price">${fmt(c.price)} ₽</div>
+      <div class="bars">
+        <div class="bar"><span>Цена</span><span class="track"><span class="fill p" style="width:${c.ps*10}%"></span></span><span class="v">${f1(c.ps)}</span></div>
+        <div class="bar"><span>Качество</span><span class="track"><span class="fill q" style="width:${c.q*10}%"></span></span><span class="v">${f1(c.q)}</span></div>
+      </div>
+      <div class="tot">${f1(c.tot)}</div>
+    </div>`).join("");
+  const pos=s.findIndex(c=>c.client)+1;
+  document.getElementById("domPos").textContent=pos+" место";
+  document.querySelector("#domPos + span").textContent="Доминанта при весе цены "+Math.round(W*100)+"%";
+}
+const rt=(r,cls)=>r?`<span class="rt${r[0]<4.3?" low":""}">${f1(r[0])} <small>(${fmt(r[1])})</small></span>`:'<span class="muted">—</span>';
+let sortK="tot",sortDir=-1;
+function renderTable(){
+  score();
+  const val=c=>{const v=c[sortK];if(Array.isArray(v))return v[0];if(v==null)return -1;if(sortK==="scope")return {full:2,part:1,none:0}[v];return v};
+  const s=[...D].sort((a,b)=>{const x=val(a),y=val(b);return (typeof x==="string"?x.localeCompare(y,"ru"):x-y)*sortDir});
+  document.querySelector("#tbl tbody").innerHTML=s.map(c=>`
+    <tr class="${c.client?"client":""}">
+      <td><a href="${c.url}" target="_blank" rel="noopener"><b>${esc(c.name)}</b></a>${c.agg?'<span class="agg">АГР</span>':""}<span class="note">${esc(c.note)}</span></td>
+      <td class="r">${c.br}</td>
+      <td class="r">${fmt(c.price)}<br><small class="muted">${esc(c.psrc)}</small></td>
+      <td><span class="pill ${SCOPE[c.scope][1]}">${SCOPE[c.scope][0]}</span></td>
+      <td>${esc(c.impl)}</td><td>${esc(c.guar)}</td><td>${esc(c.inst)}</td>
+      <td>${rt(c.ya)}</td><td>${rt(c.gis)}</td><td>${rt(c.pd)}</td>
+      <td><span class="sig" title="${c.sig.map((v,i)=>(v?"✓ ":"✗ ")+SIG[i]).join("\n")}">${c.sig.map(v=>`<i class="${v?"on":""}"></i>`).join("")}</span></td>
+      <td class="r">${f1(c.q)}</td><td class="r"><b>${f1(c.tot)}</b></td>
+    </tr>`).join("");
+  document.querySelectorAll("#tbl th").forEach(th=>th.setAttribute("aria-sort",th.dataset.k===sortK?(sortDir<0?"descending":"ascending"):"none"));
+}
+document.querySelectorAll("#tbl th").forEach(th=>{
+  th.tabIndex=0;
+  const go=()=>{const k=th.dataset.k;if(k===sortK)sortDir*=-1;else{sortK=k;sortDir=(k==="name"||k==="price"||k==="impl"||k==="guar"||k==="inst")?1:-1}renderTable()};
+  th.addEventListener("click",go);th.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go()}});
+});
+const w=document.getElementById("w"),wo=document.getElementById("wout");
+w.addEventListener("input",()=>{W=w.value/100;wo.textContent=`цена ${w.value}% · качество ${100-w.value}%`;renderRank();renderTable()});
+document.getElementById("siglist").innerHTML=SIG.map(s=>`<li>${s}</li>`).join("");
+renderRank();renderTable();
+</script>
+
+</html>
